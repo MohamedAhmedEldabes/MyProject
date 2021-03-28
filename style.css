@@ -1,0 +1,761 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h5,h6{
+    font-family: 'Roboto', sans-serif;
+}
+/* general css */
+.blur ,.blur2,.blur3 ,.blur4 ,.blur5{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+}
+section.about ,section.portfolio ,section.services ,section.show ,section.prices ,section.team ,section.blog ,
+ section.contact{
+    width: 100%;
+    padding: 50px 0;
+    margin-top: 30px ;
+}
+.about-title ,.portfolio-title ,.services-title ,.prices-title ,.team-title ,.blog-title ,.contact-title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.about-title h2 ,.portfolio-title h2 ,.services-title h2 ,.show-first h2 ,.prices-title h2 ,.team-title h2 ,
+.blog-title h2 ,.contact-title h2{
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+.about-title h2:after ,.portfolio-title h2:after ,.services-title h2:after ,.show-first h2:after ,
+.prices-title h2:after ,.team-title h2:after ,.blog-title h2:after ,.contact-title h2:after{
+    display: block;
+    width: 40px;
+    height: 3px;
+    content: "";
+    background-color: teal;
+    margin: 5px auto;
+}
+
+/* start Navbar */
+header.navbar{
+    width: 100%;
+    position: fixed;
+    background-color: grey;
+    padding: 10px 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    z-index: 9999;
+}
+.logo{
+    width: 150px;
+}
+.logo img{
+    width: 100%;
+}
+.nav{
+    margin-top: 15px;
+}
+.nav li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+.nav li a{
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-size: larger;
+    padding: 5px;
+    display: block;
+    position: relative;
+}
+.nav a:after {
+    width: 0;
+    height: 3px;
+    background-color: teal;
+    content: "";
+    margin-top: 10px;
+    display: block;
+    transition: width 0.4s ease-in-out;
+}
+.nav a:hover:after{
+    width: 100%;
+}
+.navbar i{
+    cursor: pointer;
+    margin-top: 10px;
+    color: rgb(44, 34, 34);
+    display: none;
+}
+
+/* End Navbar */
+/* start Home section */
+
+section.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/background/background1.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home-desc ,.portfolio-item-desc{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+.home-desc h1{
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+.home-desc p{
+    margin: 30px 0;
+    font-size: x-large;
+    word-spacing: 3px;
+    line-height: 40px;
+    
+
+}
+.home-desc a{
+    text-decoration: none;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+.home-desc a:first-of-type{
+    color: black;
+    background-color: white;
+}
+.home-desc a:last-of-type{
+    color: white;
+    background-color: teal;
+    margin-left: 10px;
+}
+
+/* End Home section */
+
+/* start About section */
+
+.about-content ,.portfolio-content ,.services-content ,.show ,.number-content ,.prices-content ,
+.testimonial-content ,.team-content ,.blog-content ,.contact-content{
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 60px 0 20px 0;
+}
+.about-item ,.services-item ,.price-item ,.team-member ,.blog-item ,.contact-item{
+    position: relative;
+    width: 30%;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 30px 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.blur2{
+    width: 0;
+    z-index: -1;
+    
+    transition: width 0.4s ease-in-out;
+}
+
+.about-item i{
+    color: blue;
+    margin-bottom: 20px;
+}
+.about-item h4 ,.service-item-desc h3{
+    font-size: x-large;
+    text-transform: capitalize;
+    transition: color 0.5s ease-in-out;
+}
+.about-item p ,.service-item-desc p ,.show-first p{
+    color: grey;
+    font-size: larger;
+    margin: 20px 0;
+}
+.about-item a{
+    text-decoration: none;
+    font-size: larger;
+    color: teal;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.about-item:hover .blur2 ,
+.services-item:hover .blur2{
+    width: 100%;
+}
+.about-item:hover h4 ,.services-item:hover h3{
+    color: white;
+}
+/* End About section */
+/* start portfolio section */
+
+section.portfolio ,section.show{
+    background-color: #f9f9f9;
+}
+.portfolio-item{
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 20px;
+
+}
+.portfolio-item img{
+    width: 100%;
+}
+.portfolio-item-desc p{
+    font-size: x-large;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: blue;
+    text-transform: capitalize;
+}
+.portfolio-item-desc span{
+    margin: 15px 0;
+    font-size: larger;
+    display: block;
+}
+.portfolio-item-desc i{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.portfolio-item-desc i:last-of-type{
+    margin-left: 10px;
+}
+
+.blur3 {
+    margin-top: -50%;
+    height: 0;
+    opacity: 0.8;
+    transition: height 0.3s ease-in-out;
+    transition: margin-top 0.5s ease-in-out;
+}
+.portfolio-item:hover .blur3{
+    margin-top: 0;
+    height: 100%;
+}
+
+/* End portfolio section */
+
+/* start services section */
+
+.services-item i{
+    position: absolute;
+    color: blue;
+    left: 20px;
+    top: 30px;
+}
+.service-item-desc{
+    text-align: left;
+    padding-left: 60px;
+}
+
+/* End services section */
+
+/* start show section */
+section.show{
+    padding:50px 5%;
+    margin: 0;
+}
+.show-first{
+    width: 46%;
+}
+.show-first h2:after{
+    margin: 5px 0;
+}
+.show-list li{
+    list-style-type: none;
+    margin: 10px 0;
+}
+.show-list li i{
+    color: blue;
+    margin-right:10px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.slider{
+    width: 48%;
+    position: relative;
+}
+img.main-slide{
+    width: 100%;
+    height: 450px;
+}
+.slider i{
+    position: absolute;
+    top: 45%;
+    color: white;
+    background-color: teal;
+    padding: 5px;
+    cursor: pointer;
+}
+.slider i:first-of-type{
+    left: 0;  
+}
+.slider i:last-of-type{
+    right: 0;    
+}
+.slider-pointer{
+    width: 90px;
+    margin: 5px auto;
+}
+.slider-pointer span{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(94, 83, 83);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.pointer-active{
+    background-color: teal !important;
+}
+/* End show section */
+
+/* start number section */
+
+section.number,section.testimonial{
+    position: relative;
+    width: 100%;
+    min-height: 40vh;
+    background-image: url(img/background/background2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 70px 0;
+}
+
+.number-item{
+    width: 23%;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+    z-index: 99;
+}
+.number-item i{
+    color: blue;
+}
+.number-item h3{
+    font-size: xx-large;
+    margin: 10px 0;
+}
+.number-item p{
+    font-size: larger;
+    text-transform: capitalize;
+}
+
+
+/* End number section */
+/* start prices section */
+
+.price-item-title {
+    color: grey;
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.price-item-num{
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid teal;
+    border-radius: 50%;
+    display: inline-block;
+    transition: color 0.6s ease-in-out;
+}
+.price-item-num h2{
+    font-size: xx-large;
+}
+.price-item-num span{
+    text-transform: uppercase;
+}
+.price-item-desc{
+    margin-bottom: 30px;
+}
+.price-item-desc p{
+    text-transform: capitalize;
+    color: gray;
+    line-height: 30px;
+    
+}
+.price-item a{
+    margin: 70px 0;
+    text-decoration: none;
+    color: teal;
+    border: 2px solid springgreen;
+    padding: 5px 20px;
+    font-weight: bolder;
+}
+.blur4{
+    top: 400px;
+    bottom: 0;
+    z-index: -1;
+    transition: top 0.4s ease-in-out;
+}
+.price-item:hover .blur4{
+    top: 0;
+}
+.price-item:hover .price-item-num{
+    color: white;
+}
+/* End prices section */
+/* start testimonial section */
+
+section.testimonial{
+    background-image: url(img/background/background3.webp);
+    min-height: 60vh;
+}
+.testimonial-member{
+    width: 45%;
+    z-index: 99;
+}
+.testimonial-personalize{
+    position: relative;
+    margin-bottom: 20px;
+}
+.testimonial-personalize img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+.testimonial-personalize h3 ,.testimonial-personalize h4{
+    margin-left: 80px;
+    text-transform: capitalize;
+    line-height: 35px;
+}
+.testimonial-personalize h3{
+    color: white;
+    font-size: x-large;
+}
+.testimonial-personalize h4{
+    color: teal;
+    font-size: larger;
+}
+.testimonial-member p{
+    color: white;
+    word-spacing: 4px;
+}
+
+/* End testimonial section */
+/* start Team section */
+
+.team-member{
+    border: none;
+    border-radius: 0;
+    padding: 20px 10px;
+}
+.team-member img{
+    width: 100%;
+    height: 350px;
+}
+.team-member h3 ,.team-member h5{
+    text-transform: capitalize;
+    transition: color 0.4s ease-in-out;
+}
+.team-member h3{
+    font-size: x-large;  
+    margin: 5px;
+}
+.team-member h5{
+    font-size: large;
+    color: gray;
+}
+.blur5{
+    opacity: 0.8;
+    height: 0;
+    transition: height 0.4s ease-in-out;
+}
+.team-member-icon{
+    position: absolute;
+    width: 70px;
+    height: auto;
+    top: 20px;
+    right: 10px;
+    background-color: teal;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in-out;
+}
+.team-member-icon i{
+    color: white;
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out ;
+    transition: color 0.4s ease-in-out ;
+}
+.team-member-icon i:hover{
+    background-color: white;
+    color: teal;
+    font-size: x-large;
+}
+.team-member:hover .blur5{
+    height: 100%;
+    z-index: 0;
+}
+.team-member:hover .team-member-icon{
+    opacity: 1;
+    visibility: visible;
+}
+.team-member:hover  h3{
+    color: red;
+    
+}
+.team-member:hover .team-member h5{
+    color: teal;
+}
+
+/* End Team section */
+
+/* start Blog section */
+
+section.blog{
+    background-color: #ccc;
+}
+.blog-item{
+    border: 0;
+    padding-top: 5px;
+    text-align: left;
+    background-color: white;
+}
+.blog-item img{
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.blog-icon{
+    display: flex;
+    margin: 10px 0 20px 0;
+}
+.blog-icon-item{
+    width: 33%;
+}
+.blog-icon-item i{
+    color: blue;
+    cursor: pointer;
+}
+.blog-item p{
+    margin: 20px 0;
+    color: grey;
+}
+.blog-item a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: blue;
+    font-weight: bold;
+}
+
+/* End Blog section */
+
+/* start Contact section */
+
+.contact-item i{
+    color: teal;
+    cursor: pointer;
+}
+.contact-item h5{
+    margin: 10px 0;
+    font-size: x-large;
+}
+.contact-item span{
+    color: grey;
+    font-size: large;
+}
+form{
+    width: 100%;
+    text-align: center;
+}
+form input, .massage{
+    display: inline-block;
+    padding: 10px;
+    font-size: large;
+    margin: 5px ;
+    border: 2px solid rgb(204, 187, 187);
+}
+.email ,.password{
+    width: 45%;
+}
+.massage{
+    width: 80%;
+}
+.submit{
+    display: block;
+    margin: 10px auto;
+    color: white;
+    background-color: teal;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+/* start footer div */
+.site-footer{
+    width: 100%;
+    height: 45vh;
+    background-color: black;
+    margin: 30px 0 -55px 0;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.site-footer h1{
+    color: white;
+    text-transform: uppercase;
+    font-size: xx-large;
+    letter-spacing: 4px;
+}
+.footer-icon{
+    margin-top: 30px;
+}
+.footer-icon i{
+    color: white;
+    margin-left: 3pxpx;
+    background-color: teal;
+    padding: 10px;
+    cursor: pointer;
+}
+/* End footer div */
+
+
+/* End Contact section */
+@media(max-width:1070px){
+    .navbar i{
+        display: block;
+    }
+    .nav{
+        width: 70%;
+        text-align: center;
+    }
+    .nav li{
+        
+        width: 100%;
+        display: none;
+    }
+    .nav li a{
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 2px solid rgb(88, 80, 80);
+        transition: background-color 0.3s ease-in-out;
+        
+    }
+    .nav li a:hover{
+        background-color: teal;
+    }
+    .nav a:after{
+        display: none;
+        
+    }
+}
+@media(max-width:900px){
+    .show-first{
+        width: 80%;
+        margin: 5px auto;
+    }
+    .slider{
+        width: 80%;
+        margin: 5px auto;
+    }
+}
+@media(max-width:800px){
+    .portfolio-item{
+        width: 45%;
+    }
+    .services-item{
+        width: 45%;
+    }
+}
+@media(max-width:750px){
+    .about-item ,.price-item ,.team-member ,.blog-item{
+        width: 45%;
+    }
+    .about-item:last-of-type ,.price-item:last-of-type ,.team-member:last-of-type ,.blog-item:last-of-type{
+        margin: 20px auto;
+    }
+    .number-item{
+        width: 48%;
+    }
+}
+@media(max-width:675px){
+    .services-item{
+        width: 95%;
+    }
+    .show-first{
+        width: 100%;
+        margin: 5px auto;
+    }
+    .slider{
+        width: 100%;
+        margin: 5px auto;
+    }
+}
+@media(max-width:600px){
+    .home-desc{
+        width: 90%;
+    }
+    .logo{
+        width: 60px;
+    }
+}
+@media(max-width:560px){
+    .about-item ,.price-item ,.team-member ,.blog-item{
+        width: 90%;
+    }
+    .portfolio-item{
+        width: 95%;
+        margin: 5px auto;
+    }
+    .testimonial-member{
+        width: 90%;
+        margin: 20px auto;
+    }
+    .contact-item{
+        width: 45%;
+    }
+    .contact-item:last-of-type{
+        margin: 20px auto;
+    }
+    form{
+        margin: 30px 0;
+    }
+    .email ,.password {
+        width: 80%;
+    }
+}
+@media(max-width:300px){
+    .logo{
+        width: 60px;
+    }
+    .navbar i{
+        width: 10px;
+    }
+    .home-desc a{
+        display: block;
+    }
+    .home-desc a:last-of-type{
+        margin: 10px 0;
+    }
+}
